@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Language Learning</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <h1>Вивчення англійської</h1>
+
+    <div class="settings">
+      <label for="level">Рівень складності:</label>
+      <select id="level">
+        <option value="easy">Легкий</option>
+        <option value="medium">Середній</option>
+        <option value="hard">Складний</option>
+      </select>
+      <button id="start" type="button">Почати</button>
+    </div>
+
+    <section class="quiz" hidden>
+      <div class="info">
+        <span id="progress">Крок 1 з 10</span>
+        <span class="correct">Правильно: <b id="correctCount">0</b></span>
+        <span class="wrong">Неправильно: <b id="wrongCount">0</b></span>
+      </div>
+
+      <div id="card" class="card" role="button" tabindex="0" title="Натисніть для перевірки">
+        <p id="word"></p>
+        <label for="answer">Введіть переклад українською:</label>
+        <input id="answer" type="text" autocomplete="off">
+        <p id="message" class="message"></p>
+      </div>
+
+      <button id="check" type="button">Перевірити</button>
+    </section>
+  </main>
+
+  <div id="resultModal" class="modal" hidden>
+    <div class="modal-box">
+      <h2>Результат</h2>
+      <p id="resultText"></p>
+      <p id="knowledgeLevel"></p>
+      <button id="restart" type="button">Спробувати ще раз</button>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
